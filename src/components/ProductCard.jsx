@@ -2,7 +2,7 @@ import { Box, Image, Badge, Text, Button } from "@chakra-ui/react";
 
 const ProductCard = ({ product }) => {
   return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p="5" bg="white">
+    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p="5">
       <Image src={product.image} alt={product.name} />
 
       <Box p="6">
@@ -16,11 +16,11 @@ const ProductCard = ({ product }) => {
           {product.name}
         </Box>
 
-        <Text mt="2" color="gray.600" fontSize="sm">
+        <Box mt="2" color="gray.600" fontSize="sm">
           {product.description}
-        </Text>
+        </Box>
 
-        <Box mt="2">
+        <Box>
           ${product.price}
           <Box as="span" color="gray.600" fontSize="sm">
             / unit

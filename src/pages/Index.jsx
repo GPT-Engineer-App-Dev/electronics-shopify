@@ -1,4 +1,4 @@
-import { Container, SimpleGrid, Heading, Text } from "@chakra-ui/react";
+import { Container, SimpleGrid, Heading, Text, Box } from "@chakra-ui/react";
 import ProductCard from "../components/ProductCard";
 
 const sampleProducts = [
@@ -43,7 +43,10 @@ const Index = () => {
       </Text>
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={10}>
         {sampleProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <Box key={product.id} p={5} shadow="md" borderWidth="1px" borderRadius="md" bg="white">
+            <ProductCard product={product} />
+            <Text mt={4}>{product.description}</Text>
+          </Box>
         ))}
       </SimpleGrid>
     </Container>

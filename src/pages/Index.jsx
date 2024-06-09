@@ -45,7 +45,6 @@ const Index = () => {
         {sampleProducts.map((product) => (
           <Box key={product.id} p={5} shadow="md" borderWidth="1px" borderRadius="md" bg="white">
             <ProductCard product={product} />
-            <Text mt={4}>{product.description}</Text>
           </Box>
         ))}
       </SimpleGrid>

@@ -16,6 +16,10 @@ const ProductCard = ({ product }) => {
           {product.name}
         </Box>
 
+        <Box mt="2" color="gray.600" fontSize="sm">
+          {product.description}
+        </Box>
+
         <Box>
           ${product.price}
           <Box as="span" color="gray.600" fontSize="sm">
